@@ -1,6 +1,6 @@
 {
   "name": "fenster",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Isolated view of your react-native screens and components.",
   "main": "lib/index.js",
   "files": [
