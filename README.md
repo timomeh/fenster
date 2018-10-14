@@ -55,8 +55,8 @@ import HomeScreen from './HomeScreen'
 import FancyButton from './FancyButton'
 
 export default [
-  { name: 'Example Screen', component: ExampleScreen },
-  { name: 'Button', component: Button }
+  { name: 'Home Screen', component: HomeScreen },
+  { name: 'FancyButton', component: FancyButton }
 ]
 ```
 
