@@ -1,6 +1,7 @@
-import AppFenster from './App.fenster'
+import ExampleScreen from './ExampleScreen'
+import Button from './Button'
 
 export default [
-  { name: 'App', component: AppFenster },
-  { name: 'FooComponent', component: AppFenster }
+  { name: 'Example Screen', component: ExampleScreen },
+  { name: 'Button', component: Button }
 ]

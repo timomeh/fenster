@@ -24,6 +24,8 @@
     "react-native": "*"
   },
   "dependencies": {
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.6.2",
+    "react-native-platform-touchable": "^1.1.1",
+    "react-native-swipe-gestures": "^1.0.2"
   }
 }
