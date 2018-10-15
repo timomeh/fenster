@@ -32,15 +32,24 @@ which fenster should display.
 // App.js
 
 import React from 'react'
+import { View, StatusBar } from 'react-native'
 import { FensterRahmen } from 'fenster'
 
 import HomeScreen from './HomeScreen'
 import fenster from './fenster'
 
+// Frame is optional
+const Frame = ({ children }) => (
+  <View style={{ flex: 1 }}>
+    <StatusBar barStyle="dark-content" backgroundColor="white" />
+    {children}
+  </View>
+)
+
 export default class App extends React.Component {
   render() {
     return (
-      <FensterRahmen components={fenster}>
+      <FensterRahmen components={fenster} frame={Frame}> // `frame` is optional
         <HomeScreen />
       </FensterRahmen>
     )
@@ -58,6 +67,26 @@ export default [
   { name: 'Home Screen', component: HomeScreen },
   { name: 'FancyButton', component: FancyButton }
 ]
+```
+
+#### `components`
+
+Array of objects `{ name, component }`, where `name` is the display name in fenster's UI, and `component` is the component to render.
+
+Default: `[]`
+
+#### `frame`
+
+Render prop or react component for the wrapper around the active component inside fenster.
+
+Default:
+
+```js
+({ children }) => (
+  <View style={{ flex: 1 }}>
+    {children}
+  </View>
+)
 ```
 
 ## Usage
