@@ -46,7 +46,6 @@ which fenster should display.
 
 ```js
 import React from 'react'
-import { View, StatusBar } from 'react-native'
 import { FensterRahmen } from 'fenster'
 
 import HomeScreen from './HomeScreen'
