@@ -104,6 +104,27 @@ const components = [
 </FensterRahmen>
 ```
 
+You can also use `FensterGroup` to write your fenster components in a more
+convenient way.
+
+```js
+import { FensterGroup } from 'fenster'
+
+const screens = new FensterGroup('Screens')
+
+screens.add('Home', () => <HomeScreen />)
+screens.add('Settings', () => <SettingsScreen />)
+
+const components = [
+  screens,
+  { name: 'FancyButton', component: FancyButton }
+]
+
+<FensterRahmen components={fenster}>
+  {/* ... */}
+</FensterRahmen>
+```
+
 #### `frame`
 
 Render prop for the wrapper around the active component inside fenster.
